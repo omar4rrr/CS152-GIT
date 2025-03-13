@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <style>
+        /* Style for the red box with white bolded number */
+        .number-box {
+            background-color: red;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            margin: 0 auto 20px auto;
+        }
+
+        /* Center the form on the page */
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        form input, form textarea {
+            margin: 5px 0;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        form textarea {
+            resize: vertical;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        iframe {
+            margin: 40px auto;
+            display: block;
+            border: none;
+            width: 100%;
+            max-width: 600px;
+            height: 450px;
+        }
+
+        /* Style for displaying geolocation */
+        #loc {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Aligns radio buttons in a vertical straight line */
+        .radio-group {
+            display: flex;
+            flex-direction: items-align;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: left-center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .radio-group input[type="radio"] {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Red box with phone number -->
+    <div class="number-box">Call Now! (818) 462-4978</div>
+
+    <!-- Form -->
+    <form id="signup-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="address">Street Address</label>
+        <input type="text" id="address" placeholder="Enter your address" required>
+
+        <!-- Radio buttons aligned correctly -->
+        <label>Service Required:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="service" value="Drain Cleaning"> Drain Cleaning</label>
+            <label><input type="radio" name="service" value="Repiping"> Repiping</label>
+            <label><input type="radio" name="service" value="Water Heaters"> Water Heaters</label>
+            <label><input type="radio" name="service" value="Sewer Replacement"> Sewer Replacement</label>
+        </div>
+        <br>
+
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Enter additional details" rows="4" required></textarea>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <!-- Google Maps Location -->
+    <iframe 
+        id="mapFrame"
+        src="https://www.google.com/maps/embed/v1/place?q=660+S+Vancouver+90022,+Los+Angeles&key=AIzaSyD19QSqDrnvW-ntQyLZ3ITXkS6RQMPTKBg" 
+        allowfullscreen>
+    </iframe>
+
+    <!-- Display User's Geolocation -->
+    <div id="loc"></div>
+
+    <!-- Navigation Link -->
+    <a href="index.html">Home</a>
+
+    <!-- Link External JavaScript File -->
+    <script src="GeoLocator.js"></script>
+
+</body>
+</html>
