@@ -1,0 +1,58 @@
+body {
+    color: brown;
+    background-color: blue;
+    font-family: Georgia, "Times New Roman", serif;
+    text-align: center;
+}
+
+.wrapper {
+    width: 720px;
+    margin: 0 auto;
+}
+
+.header {
+    margin: 40px 0 20px 0;
+}
+
+.entry, .bottom-entry {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+figure {
+    display: block;
+    width: 202px;
+    height: 170px;
+    background-color: #e7e3d8;
+    padding: 9px;
+    text-align: left;
+    margin: 0 auto 20px;
+}
+
+figure img {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #d6d6d6;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+figure img:hover {
+    cursor: pointer;
+    transform: scale(1.2); /* Increase size on hover */
+}
+
+figcaption {
+    padding-left: 20px;
+}
+button {
+    display: center; /* Ensure it takes full width to apply margin */
+    margin: 0 auto; /* Center the button horizontally */
+    background-color: red; /* Example styling */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
